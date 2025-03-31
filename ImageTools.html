@@ -3,1092 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free online image tools - compress, enhance, convert, edit and optimize your images with our powerful tools">
-    <meta name="keywords" content="image compressor, background remover, photo editor, format converter, watermark tool, image optimization">
-    <title>Image Tools - Compress, Convert & Edit Images Online</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Image Tools - Compress, Convert & Edit Images Online">
-    <meta property="og:description" content="Free online image tools - compress, enhance, convert, edit and optimize your images with our powerful tools">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourdomain.com">
-    <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://yourdomain.com">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <style>
-        :root {
-            --primary-color: #4361ee;
-            --secondary-color: #3f37c9;
-            --accent-color: #4895ef;
-            --light-color: #f8f9fa;
-            --dark-color: #212529;
-            --success-color: #4bb543;
-            --warning-color: #f0ad4e;
-            --danger-color: #d9534f;
-            --border-radius: 8px;
-            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
+    <meta name="description" content="Enhance, compress, convert, and edit your images with our powerful tools. Optimize your images easily and efficiently.">
+    <meta name="keywords" content="image editing, image enhancement, image compression, format converter, watermark tool, background remover">
+    <meta name="author" content="Nandha Kumar">
+    <title>Image Editing & Optimization Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer>
+        function enhanceImage() {
+            alert("Enhance Image functionality will be implemented here.");
         }
-        
-        * {
+        function compressImage() {
+            alert("Compress Image functionality will be implemented here.");
+        }
+        function convertImage() {
+            alert("Convert Image functionality will be implemented here.");
+        }
+        function editImage() {
+            alert("Edit Image functionality will be implemented here.");
+        }
+        function addWatermark() {
+            alert("Add Watermark functionality will be implemented here.");
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            text-align: center;
+            color: #fff;
         }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: var(--dark-color);
-            background-color: #f5f7ff;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
         header {
-            background-color: white;
-            box-shadow: var(--box-shadow);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo i {
-            margin-right: 10px;
-            font-size: 28px;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-links li {
-            margin-left: 30px;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark-color);
-            font-weight: 500;
-            transition: var(--transition);
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: var(--dark-color);
-        }
-        
-        .hero {
-            text-align: center;
-            padding: 80px 0 40px;
-        }
-        
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: var(--dark-color);
-        }
-        
-        .hero p {
-            font-size: 1.1rem;
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto 40px;
-        }
-        
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin: 50px 0;
-        }
-        
-        .tool-card {
-            background-color: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            padding: 30px;
-            text-align: center;
-            transition: var(--transition);
-            cursor: pointer;
-        }
-        
-        .tool-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .tool-icon {
-            font-size: 40px;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        
-        .tool-card h3 {
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-        
-        .tool-card p {
-            color: #666;
-            margin-bottom: 20px;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 10px 20px;
-            border-radius: var(--border-radius);
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-2px);
-        }
-        
-        .btn-outline {
-            background-color: transparent;
-            border: 1px solid var(--primary-color);
-            color: var(--primary-color);
-        }
-        
-        .btn-outline:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
-        
-        .upload-area {
-            background-color: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            padding: 40px;
-            text-align: center;
-            margin: 50px 0;
-            border: 2px dashed #ddd;
-            transition: var(--transition);
-        }
-        
-        .upload-area:hover {
-            border-color: var(--primary-color);
-        }
-        
-        .upload-area i {
-            font-size: 50px;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        
-        .upload-area h2 {
-            margin-bottom: 15px;
-        }
-        
-        .upload-area p {
-            color: #666;
-            margin-bottom: 20px;
-        }
-        
-        #file-input {
-            display: none;
-        }
-        
-        .file-info {
-            margin-top: 20px;
-            display: none;
-        }
-        
-        .file-info img {
-            max-width: 100%;
-            max-height: 200px;
-            border-radius: var(--border-radius);
-            margin-bottom: 15px;
-        }
-        
-        .options {
-            margin-top: 20px;
-            text-align: left;
-            display: none;
-        }
-        
-        .option-group {
-            margin-bottom: 20px;
-        }
-        
-        .option-group h4 {
-            margin-bottom: 10px;
-            font-size: 1rem;
-        }
-        
-        .slider-container {
-            margin-bottom: 15px;
-        }
-        
-        .slider-container label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 500;
-        }
-        
-        .slider-container input[type="range"] {
-            width: 100%;
-        }
-        
-        .slider-value {
-            text-align: right;
-            font-size: 0.9rem;
-            color: #666;
-        }
-        
-        .radio-group, .checkbox-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        
-        .radio-option, .checkbox-option {
-            display: flex;
-            align-items: center;
-        }
-        
-        .radio-option input, .checkbox-option input {
-            margin-right: 8px;
-        }
-        
-        .action-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 30px;
-        }
-        
-        .ad-container {
-            background-color: #f0f2f5;
             padding: 20px;
-            border-radius: var(--border-radius);
-            margin: 40px 0;
-            text-align: center;
-            min-height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
-        
-        .ad-container p {
-            color: #999;
-            font-size: 0.9rem;
-        }
-        
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-            padding: 50px 0 20px;
-            margin-top: 50px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-column h3 {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: #eee;
-        }
-        
-        .footer-column ul {
+        nav ul {
             list-style: none;
-        }
-        
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-column ul li a {
-            color: #bbb;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        
-        .footer-column ul li a:hover {
-            color: white;
-        }
-        
-        .social-links {
+            padding: 0;
             display: flex;
-            gap: 15px;
-        }
-        
-        .social-links a {
-            color: white;
-            font-size: 20px;
-            transition: var(--transition);
-        }
-        
-        .social-links a:hover {
-            color: var(--accent-color);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #444;
-            color: #bbb;
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive styles */
-        @media (max-width: 768px) {
-            .navbar {
-                padding: 15px 0;
-            }
-            
-            .nav-links {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 70px);
-                background-color: white;
-                flex-direction: column;
-                align-items: center;
-                padding-top: 40px;
-                transition: var(--transition);
-            }
-            
-            .nav-links.active {
-                left: 0;
-            }
-            
-            .nav-links li {
-                margin: 15px 0;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .upload-area {
-                padding: 30px 20px;
-            }
-            
-            .action-buttons {
-                flex-direction: column;
-            }
-            
-            .btn {
-                width: 100%;
-            }
-        }
-        
-        /* Tool specific styles */
-        .compression-options, .conversion-options, .editor-options {
-            display: none;
-        }
-        
-        /* Loading spinner */
-        .spinner {
-            display: none;
-            width: 40px;
-            height: 40px;
-            margin: 20px auto;
-            border: 4px solid rgba(0, 0, 0, 0.1);
-            border-radius: 50%;
-            border-top-color: var(--primary-color);
-            animation: spin 1s ease-in-out infinite;
-        }
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        
-        /* Result section */
-        .result-section {
-            display: none;
-            margin-top: 30px;
-            background-color: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            padding: 30px;
-        }
-        
-        .result-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .result-comparison {
-            display: flex;
-            flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
-            margin-bottom: 30px;
         }
-        
-        .result-item {
-            flex: 1;
-            min-width: 250px;
+        nav ul li {
+            display: inline;
         }
-        
-        .result-item img {
-            width: 100%;
-            border-radius: var(--border-radius);
-            margin-bottom: 10px;
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s;
         }
-        
-        .result-stats {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 5px;
+        nav ul li a:hover {
+            color: #ffcc00;
         }
-        
-        .download-btn {
-            display: block;
-            width: 100%;
-            text-align: center;
+        .ad-space {
+            margin: 20px 0;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        section {
+            padding: 40px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background: #ffcc00;
+            color: #333;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background: #ff9900;
+        }
+        canvas {
+            margin-top: 20px;
+            border: 2px solid #fff;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <div class="container">
-            <nav class="navbar">
-                <a href="#" class="logo">
-                    <i class="fas fa-image"></i>
-                    <span>ImageTools</span>
-                </a>
-                
-                <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#tools">Tools</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                
-                <button class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-        </div>
+        <h1>Ultimate Image Tool</h1>
+        <nav>
+            <ul>
+                <li><a href="#enhance">Enhance</a></li>
+                <li><a href="#compress">Compress</a></li>
+                <li><a href="#convert">Convert</a></li>
+                <li><a href="#edit">Edit</a></li>
+                <li><a href="#watermark">Watermark</a></li>
+            </ul>
+        </nav>
     </header>
     
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Image Tools</h1>
-            <p>Enhance, compress, convert and edit your images with our powerful tools</p>
-            
-            <!-- Ad Container Top -->
-            <div class="ad-container">
-                <!-- Google AdSense Ad Unit -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID"></script>
-                <!-- ImageTools_Top_Banner -->
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-YOUR_ADSENSE_ID"
-                     data-ad-slot="YOUR_AD_SLOT_ID"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
+    <section id="adsense">
+        <div class="ad-space">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-XXXXXXXXXXXXXX"
+                data-ad-slot="XXXXXXXXXX"
+                data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
     </section>
     
-    <!-- Main Content -->
-    <main class="container">
-        <!-- Tools Grid -->
-        <section id="tools">
-            <div class="tools-grid">
-                <div class="tool-card" data-tool="compressor">
-                    <div class="tool-icon">
-                        <i class="fas fa-compress-alt"></i>
-                    </div>
-                    <h3>Image Compressor</h3>
-                    <p>Reduce image file size without losing quality</p>
-                    <button class="btn btn-outline use-tool">Use Tool</button>
-                </div>
-                
-                <div class="tool-card" data-tool="remover">
-                    <div class="tool-icon">
-                        <i class="fas fa-eraser"></i>
-                    </div>
-                    <h3>Background Remover</h3>
-                    <p>Remove background from images automatically</p>
-                    <button class="btn btn-outline use-tool">Use Tool</button>
-                </div>
-                
-                <div class="tool-card" data-tool="editor">
-                    <div class="tool-icon">
-                        <i class="fas fa-edit"></i>
-                    </div>
-                    <h3>Photo Editor</h3>
-                    <p>Edit and enhance your photos online</p>
-                    <button class="btn btn-outline use-tool">Use Tool</button>
-                </div>
-                
-                <div class="tool-card" data-tool="converter">
-                    <div class="tool-icon">
-                        <i class="fas fa-exchange-alt"></i>
-                    </div>
-                    <h3>Format Converter</h3>
-                    <p>Convert between JPG, PNG, WEBP and more</p>
-                    <button class="btn btn-outline use-tool">Use Tool</button>
-                </div>
-                
-                <div class="tool-card" data-tool="watermark">
-                    <div class="tool-icon">
-                        <i class="fas fa-copyright"></i>
-                    </div>
-                    <h3>Watermark Tool</h3>
-                    <p>Add text or image watermark to your photos</p>
-                    <button class="btn btn-outline use-tool">Use Tool</button>
-                </div>
-            </div>
+    <main>
+        <section id="enhance">
+            <h2>Image Enhancer</h2>
+            <input type="file" id="uploadEnhance" accept="image/*">
+            <button onclick="enhanceImage()">Enhance</button>
+            <canvas id="enhanceCanvas"></canvas>
         </section>
-        
-        <!-- Ad Container Middle -->
-        <div class="ad-container">
-            <!-- Google AdSense Ad Unit -->
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID"></script>
-            <!-- ImageTools_Middle_Rectangle -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
-                 data-ad-slot="YOUR_AD_SLOT_ID"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-        
-        <!-- Upload Area -->
-        <section class="upload-area" id="upload-area">
-            <i class="fas fa-cloud-upload-alt"></i>
-            <h2>Upload Your Image</h2>
-            <p>Drag & drop your image here or click to browse</p>
-            <input type="file" id="file-input" accept="image/*">
-            <button class="btn" id="upload-btn">Select Image</button>
-            
-            <div class="file-info" id="file-info">
-                <img id="preview-image" src="#" alt="Preview">
-                <p id="file-name"></p>
-                <p id="file-size"></p>
-            </div>
-            
-            <!-- Tool Options will be shown here based on selected tool -->
-            <div class="options" id="tool-options">
-                <!-- Compression Options -->
-                <div class="compression-options">
-                    <div class="option-group">
-                        <h4>Compression Level</h4>
-                        <div class="slider-container">
-                            <label for="compression-level">Quality: <span id="compression-value">80</span>%</label>
-                            <input type="range" id="compression-level" min="1" max="100" value="80">
-                        </div>
-                    </div>
-                    
-                    <div class="option-group">
-                        <h4>Output Format</h4>
-                        <div class="radio-group">
-                            <div class="radio-option">
-                                <input type="radio" id="format-original" name="output-format" value="original" checked>
-                                <label for="format-original">Original</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" id="format-jpg" name="output-format" value="jpg">
-                                <label for="format-jpg">JPG</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" id="format-png" name="output-format" value="png">
-                                <label for="format-png">PNG</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" id="format-webp" name="output-format" value="webp">
-                                <label for="format-webp">WEBP</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Conversion Options -->
-                <div class="conversion-options">
-                    <div class="option-group">
-                        <h4>Convert To</h4>
-                        <div class="radio-group">
-                            <div class="radio-option">
-                                <input type="radio" id="convert-jpg" name="convert-format" value="jpg" checked>
-                                <label for="convert-jpg">JPG</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" id="convert-png" name="convert-format" value="png">
-                                <label for="convert-png">PNG</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" id="convert-webp" name="convert-format" value="webp">
-                                <label for="convert-webp">WEBP</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" id="convert-gif" name="convert-format" value="gif">
-                                <label for="convert-gif">GIF</label>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="option-group">
-                        <h4>Quality Settings</h4>
-                        <div class="slider-container">
-                            <label for="conversion-quality">Quality: <span id="conversion-quality-value">90</span>%</label>
-                            <input type="range" id="conversion-quality" min="1" max="100" value="90">
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Editor Options -->
-                <div class="editor-options">
-                    <div class="option-group">
-                        <h4>Adjustments</h4>
-                        <div class="slider-container">
-                            <label for="brightness">Brightness: <span id="brightness-value">0</span></label>
-                            <input type="range" id="brightness" min="-100" max="100" value="0">
-                        </div>
-                        <div class="slider-container">
-                            <label for="contrast">Contrast: <span id="contrast-value">0</span></label>
-                            <input type="range" id="contrast" min="-100" max="100" value="0">
-                        </div>
-                        <div class="slider-container">
-                            <label for="saturation">Saturation: <span id="saturation-value">0</span></label>
-                            <input type="range" id="saturation" min="-100" max="100" value="0">
-                        </div>
-                    </div>
-                    
-                    <div class="option-group">
-                        <h4>Filters</h4>
-                        <div class="radio-group">
-                            <div class="radio-option">
-                                <input type="radio" id="filter-none" name="filter" value="none" checked>
-                                <label for="filter-none">None</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" id="filter-grayscale" name="filter" value="grayscale">
-                                <label for="filter-grayscale">Grayscale</label>
-                            </div>
-                            <div class="radio-option">
-                                <input type="radio" id="filter-sepia" name="filter" value="sepia">
-                                <label for="filter-sepia">Sepia</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="action-buttons">
-                    <button class="btn" id="process-btn">Process Image</button>
-                    <button class="btn btn-outline" id="cancel-btn">Cancel</button>
-                </div>
-            </div>
-            
-            <!-- Loading Spinner -->
-            <div class="spinner" id="spinner"></div>
-            
-            <!-- Result Section -->
-            <div class="result-section" id="result-section">
-                <div class="result-header">
-                    <h3>Processed Image</h3>
-                    <div class="result-stats">
-                        <span>Original: <span id="original-size">0 KB</span></span>
-                        <span>Processed: <span id="processed-size">0 KB</span></span>
-                        <span>Saved: <span id="saved-percentage">0%</span></span>
-                    </div>
-                </div>
-                
-                <div class="result-comparison">
-                    <div class="result-item">
-                        <img id="original-result" src="#" alt="Original">
-                        <p>Original Image</p>
-                        <div class="result-stats">
-                            <span>Size: <span id="original-result-size">0 KB</span></span>
-                            <span>Dimensions: <span id="original-dimensions">0×0</span></span>
-                        </div>
-                    </div>
-                    
-                    <div class="result-item">
-                        <img id="processed-result" src="#" alt="Processed">
-                        <p>Processed Image</p>
-                        <div class="result-stats">
-                            <span>Size: <span id="processed-result-size">0 KB</span></span>
-                            <span>Dimensions: <span id="processed-dimensions">0×0</span></span>
-                        </div>
-                    </div>
-                </div>
-                
-                <button class="btn download-btn" id="download-btn">
-                    <i class="fas fa-download"></i> Download Processed Image
-                </button>
-            </div>
+
+        <section id="compress">
+            <h2>Image Compressor</h2>
+            <input type="file" id="uploadCompress" accept="image/*">
+            <button onclick="compressImage()">Compress</button>
+            <canvas id="compressCanvas"></canvas>
         </section>
-        
-        <!-- How It Works Section -->
-        <section id="how-it-works" class="section">
-            <h2>How It Works</h2>
-            <p>Our image tools are easy to use and work entirely in your browser.</p>
-            <!-- Add steps here -->
+
+        <section id="convert">
+            <h2>Format Converter</h2>
+            <input type="file" id="uploadConvert" accept="image/*">
+            <select id="formatSelect">
+                <option value="png">PNG</option>
+                <option value="jpg">JPG</option>
+                <option value="webp">WEBP</option>
+            </select>
+            <button onclick="convertImage()">Convert</button>
+            <canvas id="convertCanvas"></canvas>
         </section>
-        
-        <!-- Ad Container Bottom -->
-        <div class="ad-container">
-            <!-- Google AdSense Ad Unit -->
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID"></script>
-            <!-- ImageTools_Bottom_Banner -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
-                 data-ad-slot="YOUR_AD_SLOT_ID"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
+
+        <section id="edit">
+            <h2>Photo Editor</h2>
+            <input type="file" id="uploadEdit" accept="image/*">
+            <button onclick="editImage()">Edit</button>
+            <canvas id="editCanvas"></canvas>
+        </section>
+
+        <section id="watermark">
+            <h2>Watermark Tool</h2>
+            <input type="file" id="uploadWatermark" accept="image/*">
+            <input type="text" id="watermarkText" placeholder="Enter watermark text">
+            <button onclick="addWatermark()">Apply Watermark</button>
+            <canvas id="watermarkCanvas"></canvas>
+        </section>
     </main>
-    
-    <!-- Footer -->
+
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>ImageTools</h3>
-                    <p>Free online tools to enhance, compress, convert and edit your images.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Tools</h3>
-                    <ul>
-                        <li><a href="#">Image Compressor</a></li>
-                        <li><a href="#">Background Remover</a></li>
-                        <li><a href="#">Photo Editor</a></li>
-                        <li><a href="#">Format Converter</a></li>
-                        <li><a href="#">Watermark Tool</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Tutorials</a></li>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">API Documentation</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Company</h3>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; <span id="year"></span> ImageTools. All rights reserved.</p>
-            </div>
-        </div>
+        <p>&copy; 2025 Ultimate Image Tool. All Rights Reserved. | Created by Nandha Kumar</p>
     </footer>
-    
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-        
-        // Set current year in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
-        // Tool selection
-        const toolCards = document.querySelectorAll('.tool-card');
-        const uploadArea = document.getElementById('upload-area');
-        const fileInput = document.getElementById('file-input');
-        const uploadBtn = document.getElementById('upload-btn');
-        const fileInfo = document.getElementById('file-info');
-        const previewImage = document.getElementById('preview-image');
-        const fileName = document.getElementById('file-name');
-        const fileSize = document.getElementById('file-size');
-        const toolOptions = document.getElementById('tool-options');
-        const processBtn = document.getElementById('process-btn');
-        const cancelBtn = document.getElementById('cancel-btn');
-        const spinner = document.getElementById('spinner');
-        const resultSection = document.getElementById('result-section');
-        const downloadBtn = document.getElementById('download-btn');
-        
-        let currentTool = null;
-        let originalFile = null;
-        
-        // Tool selection
-        toolCards.forEach(card => {
-            card.addEventListener('click', (e) => {
-                // If clicking on the button, don't trigger the card click
-                if (e.target.classList.contains('use-tool') || e.target.closest('.use-tool')) {
-                    return;
-                }
-                
-                selectTool(card.dataset.tool);
-            });
-            
-            // Tool button click
-            const toolBtn = card.querySelector('.use-tool');
-            toolBtn.addEventListener('click', () => {
-                selectTool(card.dataset.tool);
-            });
-        });
-        
-        function selectTool(tool) {
-            currentTool = tool;
-            
-            // Scroll to upload area
-            uploadArea.scrollIntoView({ behavior: 'smooth' });
-            
-            // Highlight selected tool
-            toolCards.forEach(card => {
-                if (card.dataset.tool === tool) {
-                    card.style.border = '2px solid var(--primary-color)';
-                    card.style.transform = 'scale(1.02)';
-                } else {
-                    card.style.border = 'none';
-                    card.style.transform = 'scale(1)';
-                }
-            });
-            
-            // Show appropriate options
-            document.querySelectorAll('.options > div').forEach(option => {
-                option.style.display = 'none';
-            });
-            
-            if (tool === 'compressor') {
-                document.querySelector('.compression-options').style.display = 'block';
-            } else if (tool === 'converter') {
-                document.querySelector('.conversion-options').style.display = 'block';
-            } else if (tool === 'editor') {
-                document.querySelector('.editor-options').style.display = 'block';
-            }
-            
-            // If file already selected, show options
-            if (originalFile) {
-                toolOptions.style.display = 'block';
-            }
-        }
-        
-        // File upload
-        uploadBtn.addEventListener('click', () => {
-            fileInput.click();
-        });
-        
-        fileInput.addEventListener('change', handleFileSelect);
-        
-        // Drag and drop
-        uploadArea.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            uploadArea.style.borderColor = 'var(--primary-color)';
-            uploadArea.style.backgroundColor = 'rgba(67, 97, 238, 0.05)';
-        });
-        
-        uploadArea.addEventListener('dragleave', () => {
-            uploadArea.style.borderColor = '#ddd';
-            uploadArea.style.backgroundColor = 'white';
-        });
-        
-        uploadArea.addEventListener('drop', (e) => {
-            e.preventDefault();
-            uploadArea.style.borderColor = '#ddd';
-            uploadArea.style.backgroundColor = 'white';
-            
-            if (e.dataTransfer.files.length) {
-                fileInput.files = e.dataTransfer.files;
-                handleFileSelect({ target: fileInput });
-            }
-        });
-        
-        function handleFileSelect(e) {
-            const file = e.target.files[0];
-            
-            if (!file) return;
-            
-            if (!file.type.match('image.*')) {
-                alert('Please select an image file (JPG, PNG, GIF, etc.)');
-                return;
-            }
-            
-            originalFile = file;
-            
-            // Display file info
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                previewImage.src = e.target.result;
-                
-                // Also set for result comparison
-                document.getElementById('original-result').src = e.target.result;
-                
-                // Get image dimensions
-                const img = new Image();
-                img.onload = function() {
-                    document.getElementById('original-dimensions').textContent = 
-                        `${this.width}×${this.height}`;
-                };
-                img.src = e.target.result;
-            };
-            reader.readAsDataURL(file);
-            
-            fileName.textContent = file.name;
-            fileSize.textContent = formatFileSize(file.size);
-            
-            // Update original size in result section
-            document.getElementById('original-size').textContent = formatFileSize(file.size);
-            document.getElementById('original-result-size').textContent = formatFileSize(file.size);
-            
-            fileInfo.style.display = 'block';
-            
-            // Show tool options if tool is selected
-            if (currentTool) {
-                toolOptions.style.display = 'block';
-            } else {
-                alert('Please select a tool first');
-            }
-        }
-        
-        function formatFileSize(bytes) {
-            if (bytes === 0) return '0 Bytes';
-            
-            const k = 1024;
-            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-            const i = Math.floor(Math.log(bytes) / Math.log(k));
-            
-            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-        }
-        
-        // Slider value displays
-        document.getElementById('compression-level').addEventListener('input', (e) => {
-            document.getElementById('compression-value').textContent = e.target.value;
-        });
-        
-        document.getElementById('conversion-quality').addEventListener('input', (e) => {
-            document.getElementById('conversion-quality-value').textContent = e.target.value;
-        });
-        
-        document.getElementById('brightness').addEventListener('input', (e) => {
-            document.getElementById('brightness-value').textContent = e.target.value;
-        });
-        
-        document.getElementById('contrast').addEventListener('input', (e) => {
-            document.getElementById('contrast-value').textContent = e.target.value;
-        });
-        
-        document.getElementById('saturation').addEventListener('input', (e) => {
-            document.getElementById('saturation-value').textContent = e.target.value;
-        });
-        
-        // Process image
-        processBtn.addEventListener('click', processImage);
-        
-        function processImage() {
-            if (!originalFile) {
-                alert('Please select an image first');
-                return;
-            }
-            
-            if (!currentTool) {
-                alert('Please select a tool first');
-                return;
-            }
-            
-            // Show loading spinner
-            spinner.style.display = 'block';
-            toolOptions.style.display = 'none';
-            
-            // Simulate processing (in a real app, this would be actual image processing)
-            setTimeout(() => {
-                spinner.style.display = 'none';
-                
-                // For demo purposes, we'll just use the original image
-                // In a real app, you would process the image based on selected options
-                document.getElementById('processed-result').src = previewImage.src;
-                document.getElementById('processed-dimensions').textContent = 
-                    document.getElementById('original-dimensions').textContent;
-                
-                // Simulate some size reduction
-                const originalSize = originalFile.size;
-                const processedSize = Math.round(originalSize * 0.7); // 30% reduction for demo
-                
-                document.getElementById('processed-size').textContent = formatFileSize(processedSize);
-               
+</body>
+</html>
