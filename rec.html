@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Record your screen online in HD and export MP4 files easily. Free screen recording tool for presentations, tutorials, and more.">
+    <meta name="keywords" content="screen recorder, online screen capture, HD screen record, export MP4, free recording tool">
+    <meta name="author" content="YourSiteName">
+    <title>Free Online Screen Recorder | Record & Export in HD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from { transform: translateY(-30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            width: 90%;
+            max-width: 600px;
+        }
+
+        button {
+            background-color: #ffcc00;
+            color: #000;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ffdb4d;
+        }
+
+        video {
+            margin-top: 20px;
+            width: 100%;
+            border-radius: 0.5rem;
+        }
+
+        .ad-space {
+            margin: 2rem auto;
+            max-width: 728px;
+            height: 90px;
+            background: #ffffff22;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            p { font-size: 1rem; }
+            .ad-space { height: 60px; }
+        }
+    </style>
+</head>
+<body>
+    <h1>HD Screen Recorder</h1>
+    <p>Record your screen in HD and export as MP4 instantly!</p>
+
+    <div class="ad-space">
+        <!-- Google AdSense Placeholder -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-XXXXXX"  <!-- Replace with your AdSense ID -->
+            data-ad-slot="YYYYYY"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <div class="container">
+        <button onclick="startRecording()">Start Recording</button>
+        <video id="recordedVideo" controls></video>
+    </div>
+
+    <script>
+        let mediaRecorder;
+        let recordedChunks = [];
+
+        async function startRecording() {
+            try {
+                const stream = await navigator.mediaDevices.getDisplayMedia({ video: true });
+                mediaRecorder = new MediaRecorder(stream, {
+                    mimeType: 'video/webm;codecs=vp9'
+                });
+
+                recordedChunks = [];
+
+                mediaRecorder.ondataavailable = event => {
+                    if (event.data.size > 0) {
+                        recordedChunks.push(event.data);
+                    }
+                };
+
+                mediaRecorder.onstop = () => {
+                    const blob = new Blob(recordedChunks, { type: 'video/webm' });
+                    const video = document.getElementById('recordedVideo');
+                    video.src = URL.createObjectURL(blob);
+
+                    const a = document.createElement('a');
+                    a.href = video.src;
+                    a.download = 'recording.webm';
+                    a.textContent = 'Download Video';
+                    a.style.color = 'yellow';
+                    a.style.display = 'block';
+                    a.style.marginTop = '15px';
+                    document.querySelector('.container').appendChild(a);
+                };
+
+                mediaRecorder.start();
+
+                setTimeout(() => {
+                    mediaRecorder.stop();
+                }, 15000); // Stop recording after 15 seconds
+            } catch (err) {
+                alert('Screen recording failed: ' + err);
+            }
+        }
+    </script>
+</body>
+</html>
