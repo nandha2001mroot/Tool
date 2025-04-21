@@ -1,173 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Enhance, compress, convert, and edit your images with our powerful tools. Optimize your images easily and efficiently.">
-    <meta name="keywords" content="image editing, image enhancement, image compression, format converter, watermark tool, background remover">
-    <meta name="author" content="Nandha Kumar">
-    <title>Image Editing & Optimization Tool</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script defer>
-        function enhanceImage() {
-            alert("Enhance Image functionality will be implemented here.");
-        }
-        function compressImage() {
-            alert("Compress Image functionality will be implemented here.");
-        }
-        function convertImage() {
-            alert("Convert Image functionality will be implemented here.");
-        }
-        function editImage() {
-            alert("Edit Image functionality will be implemented here.");
-        }
-        function addWatermark() {
-            alert("Add Watermark functionality will be implemented here.");
-        }
-    </script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #00c6ff, #0072ff);
-            text-align: center;
-            color: #fff;
-        }
-        header {
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            background: rgba(0, 0, 0, 0.3);
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        nav ul li {
-            display: inline;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 18px;
-            transition: all 0.3s;
-        }
-        nav ul li a:hover {
-            color: #ffcc00;
-        }
-        .ad-space {
-            margin: 20px 0;
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-        }
-        section {
-            padding: 40px;
-            animation: fadeIn 1s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            background: #ffcc00;
-            color: #333;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: all 0.3s;
-        }
-        button:hover {
-            background: #ff9900;
-        }
-        canvas {
-            margin-top: 20px;
-            border: 2px solid #fff;
-            border-radius: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Record your screen with audio, pause/resume recording, and export in HD MP4. Free online screen recorder with impressive UI and animations." />
+  <meta name="keywords" content="screen recorder, online screen recorder, record screen with audio, mp4 screen recorder, screen capture tool" />
+  <meta name="author" content="Your Name" />
+  <title>Screen Recorder - Record Screen with Voice in HD</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      animation: fadeInDown 1s ease-in-out;
+    }
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .controls {
+      margin: 20px;
+      display: flex;
+      gap: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #1abc9c;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+    .ad-space {
+      margin-top: 30px;
+      width: 100%;
+      max-width: 728px;
+      height: 90px;
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+    }
+    video {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Ultimate Image Tool</h1>
-        <nav>
-            <ul>
-                <li><a href="#enhance">Enhance</a></li>
-                <li><a href="#compress">Compress</a></li>
-                <li><a href="#convert">Convert</a></li>
-                <li><a href="#edit">Edit</a></li>
-                <li><a href="#watermark">Watermark</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="adsense">
-        <div class="ad-space">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-XXXXXXXXXXXXXX"
-                data-ad-slot="XXXXXXXXXX"
-                data-ad-format="auto"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-    </section>
-    
-    <main>
-        <section id="enhance">
-            <h2>Image Enhancer</h2>
-            <input type="file" id="uploadEnhance" accept="image/*">
-            <button onclick="enhanceImage()">Enhance</button>
-            <canvas id="enhanceCanvas"></canvas>
-        </section>
+  <header>
+    <h1>🎥 Screen Recorder Tool</h1>
+    <p>Record your screen with voice in HD. Simple, powerful, free!</p>
+  </header>
 
-        <section id="compress">
-            <h2>Image Compressor</h2>
-            <input type="file" id="uploadCompress" accept="image/*">
-            <button onclick="compressImage()">Compress</button>
-            <canvas id="compressCanvas"></canvas>
-        </section>
+  <div class="controls">
+    <button onclick="startRecording()">Start Recording</button>
+    <button onclick="pauseRecording()">Pause</button>
+    <button onclick="resumeRecording()">Resume</button>
+    <button onclick="stopRecording()">Stop & Download</button>
+  </div>
 
-        <section id="convert">
-            <h2>Format Converter</h2>
-            <input type="file" id="uploadConvert" accept="image/*">
-            <select id="formatSelect">
-                <option value="png">PNG</option>
-                <option value="jpg">JPG</option>
-                <option value="webp">WEBP</option>
-            </select>
-            <button onclick="convertImage()">Convert</button>
-            <canvas id="convertCanvas"></canvas>
-        </section>
+  <video id="preview" autoplay muted></video>
 
-        <section id="edit">
-            <h2>Photo Editor</h2>
-            <input type="file" id="uploadEdit" accept="image/*">
-            <button onclick="editImage()">Edit</button>
-            <canvas id="editCanvas"></canvas>
-        </section>
+  <div class="ad-space">
+    <!-- Google AdSense Placeholder -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+      style="display:inline-block;width:728px;height:90px"
+      data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+      data-ad-slot="1234567890"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
 
-        <section id="watermark">
-            <h2>Watermark Tool</h2>
-            <input type="file" id="uploadWatermark" accept="image/*">
-            <input type="text" id="watermarkText" placeholder="Enter watermark text">
-            <button onclick="addWatermark()">Apply Watermark</button>
-            <canvas id="watermarkCanvas"></canvas>
-        </section>
-    </main>
+  <script>
+    let mediaRecorder;
+    let recordedChunks = [];
+    let stream;
 
-    <footer>
-        <p>&copy; 2025 Ultimate Image Tool. All Rights Reserved. | Created by Nandha Kumar</p>
-    </footer>
+    async function startRecording() {
+      stream = await navigator.mediaDevices.getDisplayMedia({ video: true, audio: true });
+      const audioStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const combined = new MediaStream([...stream.getVideoTracks(), ...audioStream.getAudioTracks()]);
+      
+      document.getElementById('preview').srcObject = combined;
+
+      recordedChunks = [];
+      mediaRecorder = new MediaRecorder(combined);
+
+      mediaRecorder.ondataavailable = event => {
+        if (event.data.size > 0) recordedChunks.push(event.data);
+      };
+
+      mediaRecorder.onstop = () => {
+        const blob = new Blob(recordedChunks, { type: 'video/mp4' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'recording.mp4';
+        a.click();
+      };
+
+      mediaRecorder.start();
+    }
+
+    function pauseRecording() {
+      if (mediaRecorder && mediaRecorder.state === 'recording') {
+        mediaRecorder.pause();
+      }
+    }
+
+    function resumeRecording() {
+      if (mediaRecorder && mediaRecorder.state === 'paused') {
+        mediaRecorder.resume();
+      }
+    }
+
+    function stopRecording() {
+      if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+        mediaRecorder.stop();
+        stream.getTracks().forEach(track => track.stop());
+      }
+    }
+  </script>
 </body>
 </html>
